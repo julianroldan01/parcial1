@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      <ion-icon name="person-add-outline"></ion-icon>  Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-card mode="ios" color="dark" *ngFor="let item of arrayElements; let indice = index">
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>  
+      <ion-img [src]="item.icon"></ion-img>
+      <ion-input placeholder="digite su correo"></ion-input>
+      <ion-input placeholder="contraseña" type="password"></ion-input>
+      <ion-input placeholder="confirmar la contraseña" type="password"></ion-input>
+      <ion-input placeholder="nombre de cuenta"></ion-input>
+     <ion-button color="primary" [routerLink]="['/login']" >Aceptar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

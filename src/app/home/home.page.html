@@ -1,0 +1,37 @@
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="home-outline"></ion-icon> Home
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list color="dark">
+        <ion-item color="dark" [routerLink]="['/registrar']"><ion-icon name="person-add-outline"></ion-icon> Register</ion-item>
+        <ion-item color="dark" [routerLink]="['/login']" ><ion-icon name="person-outline"></ion-icon> Login</ion-item>
+        <ion-item color="dark" [routerLink]="['/listar']" color="dark"><ion-icon name="navigate-outline"></ion-icon> Api</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+<ion-content padding class="bg">
+  <ion-card *ngFor="let item of arrayElements; let indice = index" color="dark">
+    <ion-card-header>
+      <ion-card-title>{{item.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="item.icon"></ion-img>
+      <p></p>
+     <ion-button color="primary" (click)="alert(item)" >informacion</ion-button>
+     <p></p>
+     <ion-button color="primary" (click)="presentActionSheet()" >Accion</ion-button>
+    </ion-card-content>
+  </ion-card>

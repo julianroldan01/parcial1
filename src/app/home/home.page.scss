@@ -1,0 +1,44 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+#colortext {
+  color:rgb(64, 238, 87);
+}
+ion-content {
+  --background: none;
+  background-image: url('/assets/icon/estrellas.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my-custom-menu {
+  --width: 500px;
+}
+ion-list {
+  --background: none;
+  background-color: rgb(37, 37, 37);
+}
